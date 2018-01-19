@@ -1,0 +1,82 @@
+生成请求
+{	"userInfo":{"username":"xujing3"},
+	"containerInfo":{
+		"amount":"2",
+		"details":[
+			"76dac501f6e8","66cbf9a06e7f"
+		]
+	}
+}
+
+请求返回结果
+{
+    "66cbf9a06e7f": {
+        "IP": "195.168.2.2",
+        "Port": {
+            "3389/tcp": null
+        },
+        "containerID": "03a47afdba",
+        "guacamoleInfo": {
+            "connectionID": "139",
+            "groupID": "94",
+            "url": "http://192.168.20.137:8080/guacamole/#/client/MTM5AGMAbXlzcWw="
+        },
+        "networkID": "5364acc8b5",
+        "status": "running"
+    },
+    "76dac501f6e8": {
+        "IP": "195.168.2.1",
+        "Port": {
+            "22/tcp": null,
+            "3389/tcp": null,
+            "9001/tcp": null
+        },
+        "containerID": "8336dab127",
+        "guacamoleInfo": {
+            "connectionID": "138",
+            "groupID": "94",
+            "url": "http://192.168.20.137:8080/guacamole/#/client/MTM4AGMAbXlzcWw="
+        },
+        "networkID": "5364acc8b5",
+        "status": "running"
+    },
+    "userToken": {
+        "authToken": "52BD9FD5494C73C59CE1F8DA99C98821479A989C63F55DD3CAF474800EDF9322",
+        "availableDataSources": [
+            "mysql",
+            "mysql-shared"
+        ],
+        "dataSource": "mysql",
+        "username": "xujing3"
+    },
+    "userTokenEncode": "%7B%22authToken%22%3A%20%2252BD9FD5494C73C59CE1F8DA99C98821479A989C63F55DD3CAF474800EDF9322%22%2C%20%22username%22%3A%20%22xujing3%22%2C%20%22dataSource%22%3A%20%22mysql%22%2C%20%22availableDataSources%22%3A%20%5B%22mysql%22%2C%20%22mysql-shared%22%5D%7D"
+}
+
+
+删除请求、
+{	"userInfo":{"username":"xujing3"},
+	"containerInfo":{
+		"amount":"2",
+		"details":[
+			"03a47afdba","8336dab127"
+		]
+	},
+	"networkInfo":{"networkID":"5364acc8b5"},
+	"guacaInfo":{"groupID":"93",
+				"connectionID":["136","137"]}
+				
+}
+
+请求返回结果
+{
+    "guacdDel": {
+        "connectionInfo": "Not found: 136",
+        "groupInfo": "Not found: 93",
+        "userInfo": "Not found: xujing3"
+    },
+    "container": {
+        "03a47afdba": "Fail to get containerID is 03a47afdba. And the err is 404 Client Error: Not Found (\"No such container: 03a47afdba\")",
+        "8336dab127": "deleted"
+    },
+    "networkDel": "deleted"
+}
